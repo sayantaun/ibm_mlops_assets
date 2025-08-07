@@ -10,8 +10,8 @@ from dataclasses import dataclass
 
 @dataclass
 class JobRunner:
-    api_key: str = ""
-    project_id: str = ""
+    api_key: str = os.environ['API_KEY']
+    project_id: str = os.environ['PROJECT_ID']
     base_url: str = "https://api.dataplatform.cloud.ibm.com"
     identity_url: str = "https://iam.cloud.ibm.com/identity/token"
     job_name: str = "Trial job - sample_loan_risk_pipeline_stage"
