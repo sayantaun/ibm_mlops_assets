@@ -36,6 +36,9 @@ jobs:
           pip install pytest
  
       - name: execute py script # run file
+        env:
+            API_KEY: ${{secrets.API_KEY}}
+            PROJECT_ID: ${{secrets.PROJECT_ID}}
         run: |
           python trigger_pipeline.py
 
