@@ -3,6 +3,7 @@ Script to start a Watson Studio pipeline job using the Watson Data API.
 
 """
 
+import os
 import requests
 from datetime import date
 from dataclasses import dataclass
