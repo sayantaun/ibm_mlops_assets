@@ -33,14 +33,14 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pytest
+          pip install requests
  
       - name: execute py script # run file
         env:
             API_KEY: ${{secrets.API_KEY}}
             PROJECT_ID: ${{secrets.PROJECT_ID}}
         run: |
-          python trigger_pipeline.py
+          python trigger_watson_pipeline.py
 
       # Runs a single command using the runners shell
       - name: Run Watson Pipeline
