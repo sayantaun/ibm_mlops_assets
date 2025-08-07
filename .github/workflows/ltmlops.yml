@@ -41,7 +41,7 @@ jobs:
             PROJECT_ID: ${{secrets.PROJECT_ID}}
         run: |
           echo Triggering Watson Pipeline.
-          #python trigger_watson_pipeline.py
+          python trigger_watson_pipeline.py
 
       # Runs a single command using the runners shell
       - name: Run Tests
